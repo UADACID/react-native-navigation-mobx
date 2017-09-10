@@ -12,13 +12,24 @@ import { Nonauthorized } from '../routes'
 
 const StackNavigatorConfig = {
   headerMode: 'none',
+  mode: 'modal'
 }
 
-const App = StackNavigator({
-  notauth: {
-    screen: Nonauthorized,
-  },
-},StackNavigatorConfig);
+
+class App extends Component {
+
+  render() {
+    const Root = StackNavigator({
+      notauth: {
+        screen: Nonauthorized,
+      },
+    },StackNavigatorConfig);
+
+    return (
+      <Root />
+    );
+  }
+}
 
 export default App
 

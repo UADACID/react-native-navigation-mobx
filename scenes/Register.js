@@ -1,17 +1,23 @@
 /* @flow */
 
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 import {
   View,
   Text,
   StyleSheet,
-} from 'react-native';
+} from 'react-native'
+import { StackNavigator, NavigationActions } from 'react-navigation'
 
 export default class Register extends Component {
+
+  handleBack = () => {
+    this.props.navigation.dispatch(NavigationActions.back())
+  }
+
   render() {
     return (
       <View style={styles.container}>
-        <Text>I'm the Register component</Text>
+        <Text onPress={this.handleBack}>I'm the Register component</Text>
       </View>
     );
   }
