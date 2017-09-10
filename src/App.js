@@ -7,41 +7,18 @@ import {
   StyleSheet,
   TouchableOpacity
 } from 'react-native';
-import { StackNavigator } from 'react-navigation';
+import { StackNavigator } from 'react-navigation'
+import { Nonauthorized } from '../routes'
 
-class FirstView extends Component {
-  render() {
-    const { navigate } = this.props.navigation;
-    return (
-      <View style={styles.container}>
-        <TouchableOpacity
-          onPress={() => navigate('secoundView')}
-          >
-          <Text>Pencet</Text>
-        </TouchableOpacity>
-      </View>
-    );
-  }
-}
-
-class SecoundView extends Component {
-  render() {
-    return (
-      <View style={styles.container}>
-        <Text>Ini Halaman Kedua</Text>
-      </View>
-    );
-  }
+const StackNavigatorConfig = {
+  headerMode: 'none',
 }
 
 const App = StackNavigator({
-  firstView: {
-    screen: FirstView,
+  notauth: {
+    screen: Nonauthorized,
   },
-  secoundView: {
-    screen: SecoundView,
-  },
-});
+},StackNavigatorConfig);
 
 export default App
 
