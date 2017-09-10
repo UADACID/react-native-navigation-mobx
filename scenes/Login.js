@@ -27,10 +27,7 @@ export default class Login extends Component {
         <Image
           style={{width, height, position:'absolute'}}
           source={{uri: 'https://filtercon.files.wordpress.com/2015/08/lake-sierra-nevada-mnts.jpg'}}
-        >
-          <View style={{flex:1, backgroundColor:'white', opacity:0.9}}>
-          </View>
-        </Image>
+        />
         <ScrollView>
           <Text style={styles.textContainer}>Clone App</Text>
           <TextInput

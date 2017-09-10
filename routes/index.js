@@ -1,5 +1,7 @@
 import Nonauthorized from './nonauthorized.js'
+import Authorized from './authorized'
 
 export {
-  Nonauthorized
+  Nonauthorized,
+  Authorized
 }
